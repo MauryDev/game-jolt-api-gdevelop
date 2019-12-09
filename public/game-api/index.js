@@ -325,9 +325,12 @@ GameJoltAPI.info = {
         return (this.isGuest) ? location.search.split("&")[1].split("=")[1] : ""
     },
     get game_id() {
-        return (location.origin === "https://b-cdn.gamejolt.net") ? location.href.split("/")[7] : ""
+        return this.IsOriginFromCDN ? location.href.split("/")[7] : ""
     },
     get isGuest() {
-        return !!(location.origin === "https://b-cdn.gamejolt.net" && location.search);
+        return !!(this.IsOriginFromCDN && location.search);
+    },
+    get IsOriginFromCDN() {
+        return (location.origin === "https://b-cdn.gamejolt.net");
     }
 }
