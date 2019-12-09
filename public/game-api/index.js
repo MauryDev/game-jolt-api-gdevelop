@@ -1,4 +1,4 @@
-import { request } from "./tools/index.js";
+import { request,toScriptVariable } from "./tools/index.js";
 /**
  * @param {string} _key
  * @param {string} _gameid
@@ -65,6 +65,7 @@ function GameJoltAPI(_key, _gameid) {
         data_message(message_id) {
             return message_tools(message_id).getValue;
         },
+        toScriptVariable,
         methods: {
             AddScoreUser(score, sort, table_id, username, user_token, message_id, extra_data) {
                 request({
