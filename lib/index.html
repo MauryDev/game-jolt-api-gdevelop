@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+	<title>Document</title>
 </head>
+
 <body>
-    Tester
+	<div class="w3-panel w3-card w3-light-grey">
+		<h4>URL Script: Game Jolt API 1.0.1</h4>
+		<code class="w3-code htmlHigh notranslate" version='1.0.1'></code>
+		<h4>Download</h4>
+		<button id="download">Game Jolt API 1.0.1</button>
+	</div>
+	<script>
+		var download = document.getElementById("download");
+        download.onclick = function() {
+            var a = document.createElement('a');
+            a.href = 'versions/1.0.1/index.min.js';
+            a.download = "index.min.js";
+            a.click();
+        }
+        var last_version = document.querySelector("code[version='1.0.1']");
+        last_version.innerText = "<script src='https://maurydev.github.io/game-jolt-api-gdevelop/lib/versions/1.0.1/index.js'><"+"/script>"
+        w3CodeColor();
+	</script>
 </body>
+
 </html>
